@@ -1,0 +1,19 @@
+3.2.1 Đăng ký
+3.2.2 Đăng nhập
+3.2.3 Đăng xuất
+3.2.4 Xem sản phẩm
+3.2.5 Lọc sản phẩm
+3.2.6 Xem chi tiết sản phầm
+3.2.7 Bỏ vào giỏ hàng
+3.2.8 Xem giỏ hàng
+3.2.9 Xóa sản phẩm trong giỏ hàng
+3.2.10 Thanh toán
+3.2.11 Bảng điều hướng quản lý
+3.2.12 Thống kê số lượng sản phẩm bán ra
+3.2.13 Xem danh sách sản phẩm
+3.2.14 Xem chi tiết sản phẩm
+3.2.15 Thêm sản phẩm
+3.2.16 Xóa sản phẩm
+3.2.17 Cập nhật sản phẩm
+3.2.18 Xem danh sách người dùng
+3.2.19 Xem danh sách đơn hàng
