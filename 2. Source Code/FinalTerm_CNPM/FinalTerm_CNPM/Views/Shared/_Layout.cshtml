@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - FinalTerm</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("Styles", required: false)
+    <link href="~/Content/css/layout.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #control {
+            width: 100%;
+            overflow: auto;
+        }
+
+        #search{
+            width: 100%;
+            height: 100%;
+        }
+
+        #filter{
+            float: left;
+        }
+
+        .filtercontent {
+            float: left;
+            padding: 10px;
+        }
+
+            .filtercontent ul {
+                padding-left: 0px;
+                list-style-type: none;
+            }
+
+        #filterbtn {
+            background-color: black;
+            color: white;
+            border-radius: 0px;
+            transition-duration: 0.4s;
+            border: 2px solid black;
+            float: left;
+        }
+
+            #filterbtn:hover {
+                background-color: white;
+                color: black;
+                border: 2px solid black;
+            }
+
+        #control {
+            padding: 10px;
+        }
+
+        #icon {
+            background-color: black;
+            color: white;
+            text-align: center;
+            float: left;
+            border-radius: 0px;
+            border: 2px solid black;
+            margin-left: 5px;
+        }
+            #icon:hover {
+                background-color: white;
+                color: black;
+                border: 2px solid black;
+            }
+
+
+        #input-search {
+            width: 130px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+            /*height: 100%;*/
+            height: 36px;
+            padding: 8px;
+            border-radius: 0px;
+            border: 2px solid black;
+        }
+
+            #input-search:focus {
+                width: 100%;
+                border-radius: 0px;
+            }
+
+
+    </style>
+</head>
+<body>
+    @Html.Partial("_MenuBar")
+    <div class="container body-content" id="page-container">
+        <div id="control">
+
+            <button class="btn btn-primary" id="filterbtn" type="button" data-toggle="collapse" data-target="#filter" aria-expanded="false" aria-controls="filter">
+                Bộ lọc
+            </button>
+
+            <form id="search" action="#">
+                <button class="btn btn-primary" type="submit" id="icon"><i class="fa fa-search"></i></button>
+                <input id="input-search" type="text" name="search" placeholder="Tìm kiếm...">
+            </form>
+
+            <div class="collapse multi-collapse" id="filter">
+
+                <div id="cpugr" class="filtercontent">
+                    <label>CPU</label>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="i3" name="cpu" value="i3" />
+                            <label for="i3" style="font-weight: normal;"> Intel Core i3</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="i5" name="cpu" value="i5" />
+                            <label for="i5" style="font-weight: normal;"> Intel Core i5</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="i7" name="cpu" value="i7" />
+                            <label for="i7" style="font-weight: normal;"> Intel Core i7</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="ryzen3" name="cpu" value="ryzen3" />
+                            <label for="ryzen3" style="font-weight: normal;"> AMD Ryzen 3</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="ryzen5" name="cpu" value="ryzen5" />
+                            <label for="ryzen5" style="font-weight: normal;"> AMD Ryzen 5</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="ryzen7" name="cpu" value="ryzen7" />
+                            <label for="ryzen7" style="font-weight: normal;"> AMD Ryzen 7</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="ramgr" class="filtercontent">
+                    <label>RAM</label>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="4gb" name="ram" value="4gb" />
+                            <label for="4gb" style="font-weight: normal;"> 4 GB</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="8gb" name="ram" value="8gb" />
+                            <label for="8gb" style="font-weight: normal;"> 8 GB</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="16gb" name="ram" value="16gb" />
+                            <label for="16gb" style="font-weight: normal;"> 16 GB</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="storagegr" class="filtercontent">
+                    <label>Ổ cứng</label>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="hdd500gb" name="storage" value="hdd500gb" />
+                            <label for="hdd500gb" style="font-weight: normal;"> HDD: 500GB</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="hdd1tb" name="storage" value="hdd1tb" />
+                            <label for="hdd1tb" style="font-weight: normal;"> HDD: 1TB</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="ssd128gb" name="storage" value="ssd128gb" />
+                            <label for="ssd128gb" style="font-weight: normal;"> SSD: 128GB</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="ssd256gb" name="storage" value="ssd256gb" />
+                            <label for="ssd256gb" style="font-weight: normal;"> SSD: 256GB</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="ssd512gb" name="storage" value="ssd512gb" />
+                            <label for="ssd512gb" style="font-weight: normal;"> SSD: 512GB</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="displaygr" class="filtercontent">
+                    <label>Kích thước màn hình</label>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="13inch" name="display" value="13inch" />
+                            <label for="13inch" style="font-weight: normal;"> 13 inch</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="14inch" name="display" value="14inch" />
+                            <label for="14inch" style="font-weight: normal;"> 14 inch</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="15inch" name="storage" value="15inch" />
+                            <label for="15inch" style="font-weight: normal;"> 15 inch</label>
+                        </li>
+                    </ul>
+                </div>
+                <button type="submit" class="btn btn-default" id="submitfilter" style="clear: left;">Lọc</button>
+            </div>
+        </div>
+
+        <div id="content-wrap" style="clear: left">
+            @RenderBody()
+
+
+        </div>
+        <hr />
+        <footer id="footer">
+            <p>&copy; @DateTime.Now.Year - FinalTerm Shop</p>
+        </footer>
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

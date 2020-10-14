@@ -1,0 +1,108 @@
+﻿
+    <div id="control">
+
+        <button class="btn btn-primary" id="filterbtn" type="button" data-toggle="collapse" data-target="#filter" aria-expanded="false" aria-controls="filter">
+            Bộ lọc
+        </button>
+
+        <form id="search" action="#">
+            <button class="btn btn-primary" type="submit" id="icon"><i class="fa fa-search"></i></button>
+            <input id="input-search" type="text" name="search" placeholder="Tìm kiếm...">
+        </form>
+
+        <div class="collapse multi-collapse" id="filter">
+
+            <div id="cpugr" class="filtercontent">
+                <label>CPU</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="i3" name="cpu" value="i3" />
+                        <label for="i3" style="font-weight: normal;"> Intel Core i3</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="i5" name="cpu" value="i5" />
+                        <label for="i5" style="font-weight: normal;"> Intel Core i5</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="i7" name="cpu" value="i7" />
+                        <label for="i7" style="font-weight: normal;"> Intel Core i7</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="ryzen3" name="cpu" value="ryzen3" />
+                        <label for="ryzen3" style="font-weight: normal;"> AMD Ryzen 3</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="ryzen5" name="cpu" value="ryzen5" />
+                        <label for="ryzen5" style="font-weight: normal;"> AMD Ryzen 5</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="ryzen7" name="cpu" value="ryzen7" />
+                        <label for="ryzen7" style="font-weight: normal;"> AMD Ryzen 7</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="ramgr" class="filtercontent">
+                <label>RAM</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="4gb" name="ram" value="4gb" />
+                        <label for="4gb" style="font-weight: normal;"> 4 GB</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="8gb" name="ram" value="8gb" />
+                        <label for="8gb" style="font-weight: normal;"> 8 GB</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="16gb" name="ram" value="16gb" />
+                        <label for="16gb" style="font-weight: normal;"> 16 GB</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="storagegr" class="filtercontent">
+                <label>Ổ cứng</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="hdd500gb" name="storage" value="hdd500gb" />
+                        <label for="hdd500gb" style="font-weight: normal;"> HDD: 500GB</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="hdd1tb" name="storage" value="hdd1tb" />
+                        <label for="hdd1tb" style="font-weight: normal;"> HDD: 1TB</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="ssd128gb" name="storage" value="ssd128gb" />
+                        <label for="ssd128gb" style="font-weight: normal;"> SSD: 128GB</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="ssd256gb" name="storage" value="ssd256gb" />
+                        <label for="ssd256gb" style="font-weight: normal;"> SSD: 256GB</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="ssd512gb" name="storage" value="ssd512gb" />
+                        <label for="ssd512gb" style="font-weight: normal;"> SSD: 512GB</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="displaygr" class="filtercontent">
+                <label>Kích thước màn hình</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="13inch" name="display" value="13inch" />
+                        <label for="13inch" style="font-weight: normal;"> 13 inch</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="14inch" name="display" value="14inch" />
+                        <label for="14inch" style="font-weight: normal;"> 14 inch</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="15inch" name="storage" value="15inch" />
+                        <label for="15inch" style="font-weight: normal;"> 15 inch</label>
+                    </li>
+                </ul>
+            </div>
+            <button type="submit" class="btn btn-default" id="submitfilter" style="clear: left;">Lọc</button>
+        </div>
+    </div>
