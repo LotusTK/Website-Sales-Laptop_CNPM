@@ -1,0 +1,8 @@
+0. Chứa file docx để in thành quyển báo cáo
+Dưới đây là 4 mục chính trong báo cáo
+
+
+I. Tài liệu SRS - usecase và activity diagram, giao diện người dùng
+II. Tài liệu yêu cầu chi tiết - Class Diagram, ERD, Sequence Diagram
+III. Mẫu hỏi và trả lời
+IV. Các đường link tham khảo - danh cho mục tham khảo
