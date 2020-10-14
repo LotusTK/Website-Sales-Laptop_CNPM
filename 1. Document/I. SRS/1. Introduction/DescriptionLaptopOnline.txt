@@ -1,5 +1,0 @@
-Có ba người dùng trên hệ thống: gồm User (người dùng), Client (khách hàng, có thể mua), Admin (quản lý, quản lý sản phẩm, đơn hàng, người dùng)
-
-User là người dùng nói chung, họ có thể xem sản phẩm (View Products), thực hiện các chức năng của xem sản phẩm, trừ Bỏ vào giỏ hàng (Put in Cart) - yêu cầu phải đăng nhập (Log In).
-Client là khách hàng, là người có tài khoản, họ có thể đăng ký tài khoản (Sign In) để mua sản phẩm, họ có thể xem sản phẩm và Put in Cart sản phẩm họ thích, họ có thể xem giỏ hàng của mình (Manager Cart, chức năng View Products in Cart được mặt định sẵn), trong Cart họ có thể xóa sản phẩm vừa bỏ vào (Delete Product in Cart), hoặc bấm Buy Products. Lúc này các sản phẩm của họ sẽ được chuyển sang hóa đơn. Xem đơn hàng cho phép xem các đơn hàng đã mua (View Order)
-Admin là người quản lý, họ có thể xem danh sách người dùng trong hệ thống, sản phẩm trong hệ thống và các hóa đơn của các người dùng
